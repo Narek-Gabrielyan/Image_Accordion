@@ -1,0 +1,103 @@
+section {
+  display: flex;
+  gap: 10px;
+  cursor: url(pointer-hand.svg), auto;
+  border: 2px solid #000;
+  border-radius: 36px;
+  background-image: linear-gradient(
+    to bottom left,
+    #616161 0%,
+    #212121 15%,
+    #212121 85%,
+    #616161 100%
+  );
+  padding: 8px;
+}
+
+article {
+  position: relative;
+  overflow: hidden;
+  width: 64px;
+  height: 500px;
+  border-radius: 36px;
+  display: flex;
+  align-items: flex-end;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+article:hover {
+  opacity: 0.75;
+}
+
+article.active {
+  width: 400px;
+  opacity: 1;
+}
+
+article.active .content {
+  opacity: 1;
+  visibility: visible;
+}
+
+article .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  user-select: none;
+  background: linear-gradient(
+    to bottom,
+    rgb(0 0 0 / 0%),
+    rgb(0 0 0 / 80%),
+    rgb(0 0 0 / 90%)
+  );
+  transition: 0.25s;
+}
+
+article img {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  filter: grayscale(0.1);
+}
+
+article .content div {
+  font-family: "Quantico", serif;
+  font-style: italic;
+}
+
+.content div h2 {
+  color: #fafafa;
+  font-weight: 700;
+}
+
+.content div p {
+  color: #bdbdbd;
+  font-weight: 400;
+}
+
+.icon-container {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #fafafa58;
+  border-radius: 50%;
+  position: relative;
+}
+
+.icon-container img {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}

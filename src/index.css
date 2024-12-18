@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Quantico:ital,wght@1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom right, #616161, #212121, #616161);
+  height: 100vh;
+}
